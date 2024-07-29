@@ -1,13 +1,13 @@
-"use client";
+type H1Props = {
+  children: React.ReactNode;
+  className?: string;
+};
 
-import { usePathname } from "next/navigation";
-import { useRouter } from "next/navigation";
-
-function HeadingTitle() {
-  const router = useRouter();
-  console.log();
+function HeadingTitle({ children }: H1Props) {
   return (
-    <h1 className="text-4xl md:text-5xl font-bold text-center">Events in {}</h1>
+    <h1 className="text-4xl md:text-5xl font-bold text-center capitalize">
+      {children}
+    </h1>
   );
 }
 
